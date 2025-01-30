@@ -1,0 +1,29 @@
+.transaction-history {
+    width: 90%;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0 auto;
+    border: 1px solid #ECF1F4;
+}
+
+.transaction-history thead tr {
+    background-color: #00BCD5;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.transaction-history thead th {
+    padding: 1rem;
+}
+
+.transaction-history tbody td {
+    padding: 1rem;
+    color: #8f949b;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.transaction-history tbody tr:nth-of-type(even) {
+    background-color: #ECF1F4;
+}
