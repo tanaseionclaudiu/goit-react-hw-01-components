@@ -1,7 +1,8 @@
 import styles from './Statistics.module.css';
 import { getRandomHexColor } from './getRandomHexColor';
+import PropTypes from 'prop-types';
 
-export const Statistics = ({ title , stats  }) => {
+const Statistics = ({ title , stats  }) => {
     return (
 <section className={styles.statistics}>
   <h2 className={styles['stat-title']}>{title}</h2>
@@ -24,4 +25,16 @@ export const Statistics = ({ title , stats  }) => {
 </section>
     );
   };
+
+  Statistics.propTypes = {
+    title: PropTypes.string.isRequired,
+    stats: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+      }),
+    ),
+  };
   
+  export default Statistics;
